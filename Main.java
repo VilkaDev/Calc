@@ -35,6 +35,9 @@ public class Main {
                 return String.valueOf(result);
             } else if (num1 > 0 && num2 > 0) {
                 int result = calculation(num1, num2, operator);
+                if (result<1) {
+                    throw new IllegalArgumentException("Допущена ошибка при вводе выражения");
+                }
                 rez = convertArabToRoman(result);
                 return rez;
             } else {
